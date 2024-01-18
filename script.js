@@ -8,16 +8,19 @@ let score = 0;
 let totalGames = 0;
 rock.addEventListener("click", () => {
     userChoice = 'Rock';
+    totalGames += 1;
 });
 paper.addEventListener("click", () => {
     userChoice = "Paper";
+    totalGames += 1;
 });
 scissor.addEventListener("click", () => {
     userChoice = "Scissor";
+    totalGames += 1;
 });
 
 document.onclick = () => {
-    totalGames += 1;
+    
     gameLogic();
     updateScore(score,totalGames);
     changeTextbackToOriginal();
