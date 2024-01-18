@@ -6,7 +6,7 @@
 
 body {
     color: white;
-    background-image : url(/BgImg.jpg);
+    background-image : url(bgImg.jpg);
     background-size: cover;
     background-repeat: repeat-y;
 }
