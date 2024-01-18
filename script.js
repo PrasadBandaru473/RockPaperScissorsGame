@@ -2,7 +2,7 @@ let rock = document.querySelector("#rock");
 let paper = document.querySelector("#paper");
 let scissor = document.querySelector("#scissor");
 let gameText = document.querySelector(".innerB");
-let userChoice;
+let userChoice = null;
 let originalText;
 let score = 0;
 let totalGames = 0;
@@ -20,10 +20,12 @@ scissor.addEventListener("click", () => {
 });
 
 document.onclick = () => {
-    
+    if(userChoice != null){
     gameLogic();
     updateScore(score,totalGames);
     changeTextbackToOriginal();
+    userChoice = null
+    }
 }
 
 function gameLogic() {
